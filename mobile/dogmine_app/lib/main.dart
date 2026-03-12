@@ -27,8 +27,6 @@ class DogmineApp extends StatelessWidget {
 );
   }
 }
-
-class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,8 +44,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
