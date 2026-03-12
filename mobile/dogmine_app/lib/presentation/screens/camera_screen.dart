@@ -28,7 +28,7 @@ class _CameraScreenState extends State<CameraScreen> {
 
   Future<void> _takePicture() async {
     if (_controller != null && _controller!.value.isInitialized) {
-      final image = await _controller!.takePicture();
+     await _controller!.takePicture();
       // Handle the captured image here (e.g., display it, save it)
     }
   }
