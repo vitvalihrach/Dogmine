@@ -26,6 +26,6 @@ class FirestoreService {
   // Get a stream of documents in a collection
   Stream<List<T>> getCollection<T>(String collectionPath, T Function(Map<String, dynamic> data) fromJson) {
     return _db.collection(collectionPath).snapshots().map((snapshot) =>
-        snapshot.docs.map((doc) => fromJson(doc.data() as Map<String, dynamic>)).toList());
+      snapshot.docs.map((doc) => fromJson(doc.data())).toList());
   }
 }
