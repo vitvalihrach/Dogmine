@@ -1,58 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:dogmine_app/presentation/screens/home_screen.dart';
-import 'package:dogmine_app/presentation/screens/history_screen.dart';
+
 import 'package:dogmine_app/presentation/screens/camera_screen.dart';
+import 'package:dogmine_app/presentation/screens/history_screen.dart';
+import 'package:dogmine_app/presentation/screens/home_screen.dart';
 import 'package:dogmine_app/presentation/screens/login_screen.dart';
+
 void main() {
-  runApp(DogmineApp());
+  runApp(const DogmineApp());
 }
 
 class DogmineApp extends StatelessWidget {
+  const DogmineApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-  debugShowCheckedModeBanner: false,
-  initialRoute: '/home',
-  routes: {
-  '/home': (context) => HomeScreen(),
-  '/history': (context) => HistoryScreen(),
-  '/camera': (context) => CameraScreen(),
-  '/login': (context) => LoginScreen(),
-  '/details': (context) => DetailsScreen(),
-},
-  title: 'Dogmine',
-  theme: ThemeData(
-    primarySwatch: Colors.blue,
-  ),
-);
-  }
-}
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/details');
-          },
-          child: Text('Go to Details'),
-        ),
-      ),
-    );
-  }
-}
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Details'),
-      ),
-      body: Center(
-        child: Text('Details Screen'),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Dogmine',
+      initialRoute: '/home',
+      routes: <String, WidgetBuilder>{
+        '/home': (context) => const HomeScreen(),
+        '/history': (context) => const HistoryScreen(),
+        '/camera': (context) => const CameraScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }
