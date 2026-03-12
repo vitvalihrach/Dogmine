@@ -10,25 +10,21 @@ void main() {
 class DogmineApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+   return MaterialApp(
   debugShowCheckedModeBanner: false,
   initialRoute: '/home',
-  routes: {
-    '/home': (context) => HomeScreen(),
-    '/history': (context) => HistoryScreen(),
-    '/camera': (context) => CameraScreen(),
-    '/login': (context) => LoginScreen(),
-  },
+  outes: {
+  '/home': (context) => HomeScreen(),
+  '/history': (context) => HistoryScreen(),
+  '/camera': (context) => CameraScreen(),
+  '/login': (context) => LoginScreen(),
+  '/details': (context) => DetailsScreen(),
+},
+  title: 'Dogmine',
+  theme: ThemeData(
+    primarySwatch: Colors.blue,
+  ),
 );
-      title: 'Dogmine',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
-      routes: {
-        '/details': (context) => DetailsScreen(),
-      },
-    );
   }
 }
 
