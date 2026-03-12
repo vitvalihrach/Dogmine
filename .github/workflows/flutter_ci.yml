@@ -18,6 +18,7 @@ jobs:
           set -e
           git clone --depth 1 --branch stable https://github.com/flutter/flutter.git "$HOME/flutter"
           echo "$HOME/flutter/bin" >> $GITHUB_PATH
+          export PATH="$HOME/flutter/bin:$PATH"
           flutter --version
 
       - name: Flutter pub get
