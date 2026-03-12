@@ -13,7 +13,7 @@ class DogmineApp extends StatelessWidget {
    return MaterialApp(
   debugShowCheckedModeBanner: false,
   initialRoute: '/home',
-  outes: {
+  routes: {
   '/home': (context) => HomeScreen(),
   '/history': (context) => HistoryScreen(),
   '/camera': (context) => CameraScreen(),
